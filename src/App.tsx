@@ -130,7 +130,7 @@ export default function App() {
           <span className="font-bold text-slate-900">Menu</span>
           <button onClick={toggleMenu} className="p-2 -mr-2 text-slate-500 hover:bg-slate-100 rounded-lg"><X className="h-5 w-5" /></button>
         </div>
-        <nav className="flex flex-col p-4 gap-2 flex-1">
+        <nav className="flex flex-col p-4 gap-2">
           <a href="#gallery" onClick={toggleMenu} className="flex items-center p-3 rounded-lg text-slate-700 hover:bg-slate-50 font-medium">Gallery</a>
           <a href="#upload" onClick={toggleMenu} className="flex items-center p-3 rounded-lg text-slate-700 hover:bg-slate-50 font-medium">Upload Bill</a>
           <a href="#contact" onClick={toggleMenu} className="flex items-center p-3 rounded-lg text-slate-700 hover:bg-slate-50 font-medium">Contact</a>
@@ -441,7 +441,7 @@ export default function App() {
       </footer>
 
       {/* Floating Action Buttons */}
-      <div className="fixed bottom-6 right-6 z-50 flex flex-col items-center gap-3">
+      <div className="fixed bottom-20 right-6 z-50 flex flex-col items-center gap-3">
         <a 
           href="tel:+919942025493"
           className="bg-white text-slate-700 p-3.5 rounded-full shadow-lg hover:scale-110 transition-transform flex items-center justify-center border border-slate-200 group"
