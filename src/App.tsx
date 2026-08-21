@@ -5,11 +5,11 @@ import {
 } from 'lucide-react';
 
 const IMAGES = [
-  '/img1.png',
-  '/img2.png',
-  '/img3.jpg',
-  '/img4.png',
-  '/img5.png'
+  '/gallery-1.jpg',
+  '/gallery-2.jpg',
+  '/gallery-3.jpg',
+  '/gallery-4.jpg',
+  '/gallery-5.jpg'
 ];
 
 export default function App() {
@@ -101,7 +101,7 @@ export default function App() {
           <div className="flex justify-between items-center h-20">
             {/* Brand */}
             <div className="flex items-center gap-4">
-              <img src="/img2.png" alt="RVS Logo" className="h-12 w-12 rounded-xl object-cover shadow-sm" />
+              <img src="/gallery-2.jpg" alt="RVS Logo" className="h-12 w-12 rounded-xl object-cover shadow-sm" />
               <div className="flex flex-col">
                 <span className="text-xl font-black tracking-tight text-sky-500 leading-tight">RVS</span>
                 <span className="text-xs font-medium text-slate-500 uppercase tracking-widest">Departmental Stores</span>
@@ -144,11 +144,11 @@ export default function App() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative overflow-hidden pt-12 pb-20">
+        <section className="relative overflow-hidden pt-8 pb-16">
           {/* Logo Background */}
           <div 
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50"
-            style={{ backgroundImage: "url('/img2.png')" }}
+            style={{ backgroundImage: "url('/gallery-2.jpg')" }}
           />
           <div className="absolute inset-0 bg-sky-900/40" />
           
@@ -160,11 +160,11 @@ export default function App() {
               People's Own Shopping Paradise!!
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <a href="#upload" className="inline-flex justify-center items-center gap-2 bg-white text-sky-500 px-8 py-4 rounded-xl font-bold shadow-xl hover:shadow-2xl hover:scale-105 transition-all">
+              <a href="#upload" className="inline-flex justify-center items-center gap-2 bg-white text-sky-500 px-8 py-4 rounded-xl font-bold shadow-xl hover:shadow-2xl hover:scale-105 active:scale-95 transition-all">
                 <Upload className="h-5 w-5" />
                 Upload Bill Now
               </a>
-              <a href="#contact" className="inline-flex justify-center items-center gap-2 bg-sky-600/50 text-white px-8 py-4 rounded-xl font-bold backdrop-blur hover:bg-sky-600 transition-all">
+              <a href="#contact" className="inline-flex justify-center items-center gap-2 bg-sky-600/50 text-white px-8 py-4 rounded-xl font-bold backdrop-blur hover:bg-sky-600 active:scale-95 transition-all">
                 Contact us
               </a>
             </div>
@@ -172,10 +172,10 @@ export default function App() {
         </section>
 
         {/* Gallery Section */}
-        <section id="gallery" className="py-16 bg-white relative -mt-8 rounded-t-[3rem] shadow-[0_-8px_30px_rgba(0,0,0,0.04)] scroll-mt-20">
+        <section id="gallery" className="pt-10 pb-8 bg-white relative -mt-8 rounded-t-[3rem] shadow-[0_-8px_30px_rgba(0,0,0,0.04)] scroll-mt-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center max-w-2xl mx-auto mb-8">
-              <h2 className="text-3xl font-bold text-slate-900 tracking-tight mb-4">Gallery</h2>
+            <div className="text-center max-w-2xl mx-auto mb-6">
+              <h2 className="text-3xl font-bold text-slate-900 tracking-tight mb-3">Gallery</h2>
               <p className="text-slate-500">Take a look inside our departmental store where quality meets convenience.</p>
             </div>
             
@@ -208,7 +208,7 @@ export default function App() {
         </section>
 
         {/* Upload Bill Section */}
-        <section id="upload" className="py-16 bg-slate-50 scroll-mt-20">
+        <section id="upload" className="py-10 bg-slate-50 scroll-mt-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-10 items-center">
               <div>
@@ -337,10 +337,10 @@ export default function App() {
         </section>
 
         {/* Reviews Section */}
-        <section id="reviews" className="py-16 bg-slate-50 border-t border-slate-100 scroll-mt-20">
+        <section id="reviews" className="py-10 bg-slate-50 border-t border-slate-100 scroll-mt-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center max-w-2xl mx-auto mb-10">
-              <h2 className="text-3xl font-bold text-slate-900 tracking-tight mb-4">Customer Reviews</h2>
+            <div className="text-center max-w-2xl mx-auto mb-6">
+              <h2 className="text-3xl font-bold text-slate-900 tracking-tight mb-3">Customer Reviews</h2>
               <div className="flex flex-col items-center justify-center gap-1 mb-2">
                 <span className="font-bold text-4xl text-slate-900 mb-1">4.3</span>
                 <div className="flex items-center gap-1 text-amber-400">
@@ -354,44 +354,77 @@ export default function App() {
               <p className="text-slate-500 font-medium mt-2">Based on 79+ local ratings</p>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
                 {
                   name: "J Karthikeyan",
                   date: "7 months ago",
                   rating: 4,
                   text: "Friendly local people to help you through your needs. Goods sold at almost wholesale rate",
+                  color: "bg-orange-100 text-orange-700 border-orange-200"
                 },
                 {
                   name: "Hari Krishnan",
-                  date: "7 months ago",
+                  date: "9 months ago",
                   rating: 5,
                   text: "Products are very good & very quality",
+                  color: "bg-blue-100 text-blue-700 border-blue-200"
+                },
+                {
+                  name: "Praveen Kumar",
+                  date: "3 months ago",
+                  rating: 5,
+                  text: "",
+                  color: "bg-slate-100 text-slate-700 border-slate-200"
                 },
                 {
                   name: "Sownthiri Jegadeesh",
-                  date: "7 months ago",
+                  date: "11 months ago",
                   rating: 4,
                   text: "you can buy groceries here",
+                  color: "bg-green-100 text-green-700 border-green-200"
+                },
+                {
+                  name: "vinoth vivid",
+                  date: "8 months ago",
+                  rating: 2,
+                  text: "",
+                  color: "bg-teal-100 text-teal-700 border-teal-200"
+                },
+                {
+                  name: "Kaviarasu Kalimuthu",
+                  date: "10 months ago",
+                  rating: 5,
+                  text: "Friendly shoppers ✌️",
+                  color: "bg-pink-100 text-pink-700 border-pink-200"
+                },
+                {
+                  name: "Prema S",
+                  date: "5 months ago",
+                  rating: 5,
+                  text: "",
+                  color: "bg-indigo-100 text-indigo-700 border-indigo-200"
                 }
               ].map((review, idx) => (
                 <div key={idx} className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200/60 flex flex-col h-full hover:shadow-md transition-shadow">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="h-10 w-10 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center font-bold text-lg">
-                      {review.name.charAt(0)}
+                    <div className={`h-10 w-10 rounded-full flex items-center justify-center font-medium text-base opacity-90 border shadow-sm ${review.color}`}>
+                      {review.name.charAt(0).toUpperCase()}
                     </div>
                     <div>
-                      <h4 className="font-bold text-slate-900 text-sm">{review.name}</h4>
+                      <h4 className="font-bold text-slate-900 text-sm leading-tight">{review.name}</h4>
                       <span className="text-xs text-slate-500">{review.date}</span>
                     </div>
                   </div>
-                  <div className="flex items-center gap-1 text-amber-400 mb-3">
-                    {[...Array(review.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-amber-400" />
+                  <div className="flex items-center gap-1 mb-3">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className={`w-4 h-4 ${i < review.rating ? 'fill-amber-400 text-amber-400' : 'fill-slate-200 text-slate-200'}`} />
                     ))}
                   </div>
-                  <p className="text-slate-700 text-sm leading-relaxed flex-1">"{review.text}"</p>
-                  <div className="mt-4 pt-4 border-t border-slate-50 flex items-center gap-2">
+                  {review.text && (
+                    <p className="text-slate-700 text-sm leading-relaxed flex-1">"{review.text}"</p>
+                  )}
+                  <div className={`mt-4 pt-4 border-t border-slate-50 flex items-center gap-2 ${!review.text && 'mt-auto'}`}>
                     <svg className="w-4 h-4" viewBox="0 0 24 24">
                       <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
                       <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
@@ -402,15 +435,24 @@ export default function App() {
                   </div>
                 </div>
               ))}
+              
+              {/* QR Code Card */}
+              <div className="bg-white rounded-2xl shadow-sm border border-slate-200/60 flex flex-col items-center justify-center text-center h-full hover:shadow-md transition-all p-2">
+                <img 
+                  src="/google-qr.png" 
+                  alt="Google Reviews QR Code" 
+                  className="w-full h-auto object-contain rounded-xl"
+                />
+              </div>
             </div>
           </div>
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="py-16 bg-white border-t border-slate-100 scroll-mt-20">
+        <section id="contact" className="py-10 bg-white border-t border-slate-100 scroll-mt-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center max-w-2xl mx-auto mb-8">
-              <h2 className="text-3xl font-bold text-slate-900 tracking-tight mb-4">Contact us</h2>
+            <div className="text-center max-w-2xl mx-auto mb-6">
+              <h2 className="text-3xl font-bold text-slate-900 tracking-tight mb-3">Contact us</h2>
               <p className="text-slate-500">Do visit us for shopping and inquiries...</p>
             </div>
 
@@ -503,7 +545,7 @@ export default function App() {
       <footer className="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-3 opacity-90">
-            <img src="/img2.png" alt="Logo" className="h-8 w-8 rounded-lg object-cover" />
+            <img src="/gallery-2.jpg" alt="Logo" className="h-8 w-8 rounded-lg object-cover" />
             <span className="font-bold text-white tracking-wide">RVS Departmental Stores</span>
           </div>
           <p className="text-sm font-medium">
@@ -516,7 +558,7 @@ export default function App() {
       <div className="fixed bottom-6 right-6 z-50 flex flex-col items-center gap-3">
         <a 
           href="tel:+919942025493"
-          className="bg-white text-slate-700 p-3.5 rounded-full shadow-lg hover:scale-110 transition-transform flex items-center justify-center border border-slate-200 group"
+          className="bg-white text-slate-700 p-3.5 rounded-full shadow-lg hover:scale-110 active:scale-95 transition-transform flex items-center justify-center border border-slate-200 group"
           aria-label="Call us"
         >
           <Phone className="w-7 h-7 fill-current" />
@@ -525,7 +567,7 @@ export default function App() {
           href="https://wa.me/919444517649" 
           target="_blank" 
           rel="noreferrer"
-          className="bg-[#25D366] text-white p-3.5 rounded-full shadow-lg hover:scale-110 transition-transform flex items-center justify-center group"
+          className="bg-[#25D366] text-white p-3.5 rounded-full shadow-lg hover:scale-110 active:scale-95 transition-transform flex items-center justify-center group"
           aria-label="Chat on WhatsApp"
         >
           <svg viewBox="0 0 24 24" className="w-7 h-7 fill-current" xmlns="http://www.w3.org/2000/svg">
